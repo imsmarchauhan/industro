@@ -1,7 +1,10 @@
 const express = require("express");
-const app = express();
 const hbs = require("hbs");
 const path = require("path");
+const bodyParser = require("body-parser");
+
+const app = express();
+const encoder = bodyParser.urlencoded()
 
 app.set('view engine', "hbs");
 app.use(express.static("public"));
@@ -19,6 +22,10 @@ app.get("/about",(req,res)=>{
 app.get("/contact",(req,res)=>{
     res.render("contact")
 })
+app.post("/contact",encoder, (req,res)=>{
+    console.log(req.body);
+    res.render("contact")
+})
 app.get("/feature",(req,res)=>{
     res.render("feature")
 })
@@ -33,6 +40,9 @@ app.get("/team",(req,res)=>{
 })
 app.get("/testimonial",(req,res)=>{
     res.render("testimonial")
+})
+app.get("/*",(req,res)=>{
+    res.render("404")
 })
 
 app.listen(8000, ()=>console.log('Server is running at http://localhost:8000'))

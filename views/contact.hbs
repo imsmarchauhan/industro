@@ -1,4 +1,4 @@
-{{>modal-header}}
+{{>header}}
     <title>Industro - Contact</title>
 {{>navbar}}
 
@@ -9,8 +9,7 @@
             <h1 class="display-3 text-white animated slideInRight">Contact</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -29,9 +28,8 @@
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
                         </div>
                         <h4 class="mb-3">Phone Number</h4>
-                        <p class="mb-2">+012 345 67890</p>
-                        <p class="mb-4">+012 345 67890</p>
-                        <a class="btn btn-primary px-4" href="tel:+0123456789">Call Now <i
+                        <p class="mb-2">+91 9771134034</p>
+                        <a class="btn btn-primary px-4" href="tel:+919771134034">Call Now <i
                                 class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -40,10 +38,9 @@
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                             <i class="fa fa-envelope-open fa-2x text-primary"></i>
                         </div>
-                        <h4 class="mb-3">Email Address</h4>
-                        <p class="mb-2">info@example.com</p>
-                        <p class="mb-4">support@example.com</p>
-                        <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Now <i
+                        <h4 class="mb-3">Email Address</h4>                        
+                        <p class="mb-2">support@industro.com</p>
+                        <a class="btn btn-primary px-4" href="mailto:alberttech007@hotmail.com">Email Now <i
                                 class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -53,9 +50,9 @@
                             <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
                         </div>
                         <h4 class="mb-3">Office Address</h4>
-                        <p class="mb-2">+012 345 67890</p>
-                        <p class="mb-4">+012 345 67890</p>
-                        <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9"
+                        <p class="mb-2">A-43, Sector 16, Noida, UP
+                        </p>
+                        <a class="btn btn-primary px-4" href="https://www.google.com/maps/dir//DUCAT+-+Noida+Sector-16+A+-+43+%26+A+-+52+near+McDonalds,+A+Block,+Sector+16+Noida,+Uttar+Pradesh+201301/@28.5797958,77.3146667,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce5106f125cfb:0xc516eda25aa8482c!2m2!1d77.3146667!2d28.5797958?entry=ttu"
                             target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -63,7 +60,7 @@
             <div class="row mb-5">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                     <iframe class="w-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed/v1/place?q=A+43+sector+16+noida+UP&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                         frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                 </div>
@@ -83,7 +80,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6>Call Us</h6>
-                                    <span>+012 345 67890</span>
+                                    <span>+91 9771134034</span>
                                 </div>
                             </div>
                         </div>
@@ -94,42 +91,48 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6>Mail Us</h6>
-                                    <span>info@example.com</span>
+                                    <span>info@industro.com</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form action="/contact" method="post">
                         <div class="row g-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required >
+                                    <label for="name">Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Id" required >
+                                    <label for="email">Email Id</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Mobile Number" required >
+                                    <label for="phone">Mobile Number</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required >
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                    <textarea class="form-control" placeholder="Leave a message here" name="message" id="message"
                                         style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary py-3 px-5 w-100" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
