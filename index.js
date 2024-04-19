@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
     port: 587,
     tls: true,
     auth:{
-        user:"career.surajkumar@gmail.com",
-        pass: "vwlrwtitycsfvdot"
+        user:"", // Add here your email id
+        pass: "" // Add here the app password for your email id
     }
 })
 
@@ -36,7 +36,7 @@ app.get("/contact",(req,res)=>{
 })
 app.post("/contact",encoder, (req,res)=>{
     let mailOptions = {
-        from : "career.surajkumar@gmail.com",
+        from : "", // Add here the mail id from which you want to send the confirmation mail
         to: req.body.email,
         subject: "Confirmation: Industro",
         text: `
@@ -51,8 +51,8 @@ app.post("/contact",encoder, (req,res)=>{
         console.log(error);
     })
     mailOptions = {
-        from : "career.surajkumar@gmail.com",
-        to: "career.surajkumar@gmail.com",
+        from : "",  // Add your email id 
+        to: "", // Add your email id i.e. the same mail id so that you can also get a confirmation mail
         subject: "Query received : Industro",
         html: `
                 <h3>Hi</h3>
