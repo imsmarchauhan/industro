@@ -100,6 +100,9 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <form action="/contact" method="post">
                         <div class="row g-3">
+                            {{#if show}}
+                                <h4>Thanks for sharing your concern! Our team will reach you out shortly.</h4>
+                            {{/if}}
                             <div class="col-md-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required >
